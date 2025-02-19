@@ -140,10 +140,8 @@ export default function EmotionFoodPage() {
 </div>
 
 
-        {/* Main Camera Card */}
         <Card className="bg-zinc-900/50 border-zinc-800/50 backdrop-blur-sm overflow-hidden">
           <div className="relative aspect-video">
-            {/* Video Feed */}
             <video
               ref={videoRef}
               autoPlay
@@ -152,7 +150,6 @@ export default function EmotionFoodPage() {
               className="absolute inset-0 w-full h-full object-cover rounded-t-lg"
             />
             
-            {/* Camera Placeholder */}
             {!isActive && (
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-zinc-900/90">
                 <Camera className="w-12 h-12 text-fuchsia-500/50" />
@@ -160,7 +157,6 @@ export default function EmotionFoodPage() {
               </div>
             )}
             
-            {/* Emotion Overlay */}
             {isActive && (
               <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/90 via-black/60 to-transparent">
                 <div className="flex items-center justify-between">
@@ -183,7 +179,6 @@ export default function EmotionFoodPage() {
             )}
           </div>
 
-          {/* Controls */}
           <div className="p-4 border-t border-zinc-800/50">
             <Button 
               variant="ghost"
@@ -200,7 +195,6 @@ export default function EmotionFoodPage() {
           </div>
         </Card>
 
-        {/* Status Indicators */}
         <div className="mt-6 flex justify-center gap-6">
           {[
             { name: 'Camera', status: isActive },
